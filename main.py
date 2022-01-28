@@ -23,7 +23,7 @@ def import_and_predict(image_data, model):
     st.image(image, use_column_width=True)
 
 if file is None:
-    st.text("Welcome to GenrAI")
+    st.write("Welcome to GenrAI")
 else:
     image = Image.open(file)
     prediction = import_and_predict(image, model)
