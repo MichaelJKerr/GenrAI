@@ -6,10 +6,7 @@ import numpy as np
 model = tf.keras.models.load_model('model/GAI_Model.h5')
 class_names = ["Blues", "Classical", "Country" ,"Death Metal","Doom Metal","DrumNBass","Electronic","Folk","Grime","Heavy Metal","HipHop","Jazz","LoFi","Pop","Psychedelic Rock","Punk","Reggae","Rock","Soul", "Techno"]
 
-st.write("""
-         # GenrAI
-         """
-         )
+st.image("Assets/logo.jpg")
 file = st.file_uploader("Please upload an image file", type=["jpg"])
 
 def import_and_predict(image_data, model):
@@ -26,7 +23,7 @@ def import_and_predict(image_data, model):
     st.image(image, use_column_width=True)
 
 if file is None:
-    st.image("Assets/logo.jpg")
+    st.text("Welcome to GenrAI")
 else:
     image = Image.open(file)
     prediction = import_and_predict(image, model)
