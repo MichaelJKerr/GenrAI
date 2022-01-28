@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 import numpy as np
 
 model = tf.keras.models.load_model('model/GAI_Model.h5')
-class_names = ["Blues", "Classical", "Country" ,"DeathMetal","DoomMetal","DrumNBass","Electronic","Folk","Grime","HeavyMetal","HipHop","Jazz","LoFi","Pop","PsychedelicRock","Punk","Reggae","Rock","Soul"] # fill the rest
+class_names = ["Blues", "Classical", "Country" ,"Death Metal","Doom Metal","DrumNBass","Electronic","Folk","Grime","Heavy Metal","HipHop","Jazz","LoFi","Pop","Psychedelic Rock","Punk","Reggae","Rock","Soul", "Techno"]
 
 st.write("""
          # GenrAI
@@ -21,8 +21,8 @@ def import_and_predict(image_data, model):
 
     prediction = model.predict(img_array)
     score = tf.nn.softmax(prediction[0])
-    sc1 = 100 * np.max(score)
-    st.write("Image is  ", class_names[np.argmax(score)], " with ", "%.2f" % sc1, "% Accuracy")
+    score = 100 * np.max(score)
+    st.write("Image is  ", class_names[np.argmax(score)], " with ", "%.2f" % score, "% Accuracy")
     st.image(image, use_column_width=True)
 
 if file is None:
