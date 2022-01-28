@@ -26,7 +26,7 @@ def import_and_predict(image_data, model):
     st.image(image, use_column_width=True)
 
 if file is None:
-    st.text("Please upload an image file")
+    st.image("Assets/logo.jpg")
 else:
     image = Image.open(file)
     prediction = import_and_predict(image, model)
