@@ -7,7 +7,7 @@ model = tf.keras.models.load_model('model/GAI_Model.h5')
 class_names = ["Blues", "Classical", "Country" ,"Death Metal","Doom Metal","DrumNBass","Electronic","Folk","Grime","Heavy Metal","HipHop","Jazz","LoFi","Pop","Psychedelic Rock","Punk","Reggae","Rock","Soul", "Techno"]
 
 st.write("""
-         #GenrAI
+         # GenrAI
          """
          )
 file = st.file_uploader("Please upload an image file", type=["jpg"])
