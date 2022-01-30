@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 import numpy as np
 
 model = tf.keras.models.load_model('model/GAI_Model.h5')
-class_names = ["Blues", "Classical", "Country" ,"Death Metal","Doom Metal","DrumNBass","Electronic","Folk","Grime","Heavy Metal","HipHop","Jazz","LoFi","Pop","Psychedelic Rock","Punk","Reggae","Rock","Soul", "Techno"]
+class_names = ["Blues", "Classical", "Country" ,"Death Metal","Doom Metal","DrumNBass","Electronic","Folk","Grime","Heavy Metal","Hip-Hop","Jazz","Lo-fi","Pop","Psychedelic Rock","Punk","Reggae","Rock","Soul", "Techno"]
 
 st.image("Assets/logo.jpg")
 file = st.file_uploader("", type=["jpg"])
