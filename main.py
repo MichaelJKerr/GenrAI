@@ -20,7 +20,7 @@ def makePrediction(image_data, model):
     score = tf.nn.softmax(prediction[0])
     accuracy = 100 * np.max(score)
 
-    st.write("Image is  ", class_names[np.argmax(score)], " with ", "%.2f" % accuracy, "% Accuracy")
+    st.write("Image is  ", class_names[np.argmax(score)], " with ", "%.2f" % accuracy, "% Confidence")
     st.image(image, use_column_width=True)
 
 if file is None:
