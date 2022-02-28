@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image, ImageOps
 import numpy as np
 
-model = tf.keras.models.load_model('model/GAI_Model2.h5')
+model = tf.keras.models.load_model('model/GAI_Modelfinal.h5')
 class_names = ["Classical", "Country" ,"Death Metal","Doom Metal","Drum and Bass","Electronic","Grime","Heavy Metal","Hip-Hop","Lo-fi","Pop","Punk","Reggae","Soul"]
 
 st.image("Assets/logo.jpg")
